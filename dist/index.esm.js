@@ -2560,7 +2560,7 @@ const Months = (props) => {
     }, [i18n]);
     return (jsxRuntimeExports.jsx("div", { className: "w-full grid grid-cols-2 gap-2 mt-2", children: MONTHS.map(item => (jsxRuntimeExports.jsx(RoundedButton, { padding: "py-3", onClick: () => {
                 clickMonth(item);
-            }, active: currentMonth === item, children: dateFormat(new Date(`2022-${item}-01`), "MMM", i18n) }, item))) }));
+            }, active: currentMonth === item, children: dateFormat(new Date(2022, item - 1, 1), "MMM", i18n) }, item))) }));
 };
 
 const Week = () => {
@@ -2591,7 +2591,7 @@ const Week = () => {
         }
         return 0;
     }, [startWeekOn]);
-    return (jsxRuntimeExports.jsx("div", { className: "grid grid-cols-7 border-b border-gray-300 dark:border-gray-700 py-2", children: DAYS.map(item => (jsxRuntimeExports.jsx("div", { className: "tracking-wide text-gray-500 text-center", children: ucFirst(shortString(dateFormat(new Date(2022, 11, 6 + item + startDateModifier), "ddd", i18n) || "")) }, item))) }));
+    return (jsxRuntimeExports.jsx("div", { className: "grid grid-cols-7 border-b border-gray-300 dark:border-gray-700 py-2", children: DAYS.map(item => (jsxRuntimeExports.jsx("div", { className: "tracking-wide text-gray-500 text-center", children: ucFirst(shortString(dateFormat(new Date(2022, 10, 6 + item + startDateModifier), "ddd", i18n) || "")) }, item))) }));
 };
 
 const Years = (props) => {
